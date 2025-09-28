@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money count</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="front.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   
+
+
+</head>
+<body>
+    <div class="main">
+    <H1 class="libertinus-keyboard-regular">Money</H1>
+   <label for="A10">10</label>
+    <input type="type" id="A10" placeholder="10" value="">
+<br>
+    <label for="A20">20</label>
+    <input type="type" id="A20" placeholder="20" value="0">
+<br>
+    <label for="A100">100</label>
+    <input type="type" id="A100" placeholder="100" value="0">
+<br>
+    <label for="A200">200</label>
+    <input type="type" id="A200" placeholder="200" value="0">
+<br>
+    <label for="A500">500</label>
+    <input type="type" id="A500" placeholder="500" value="0">
+<br>
+    <label for="A1000">1000</label>
+    <input type="type" id="A1000" placeholder="1000" value="0">
+<br>
+    <label for="A">Coin</label>
+    <input type="type" id="A" placeholder="00" value="0">
+<br>
+    <button onclick="count()">Count</button>
+
+    <div class="total" id="tall">0</div>
+
+    </div>
+
+    <script>
+
+        function count(){
+            let A10 = parseInt(document.getElementById("A10").value) || 0;
+            let A20 = parseInt(document.getElementById("A20").value) || 0;
+            let A100 = parseInt(document.getElementById("A100").value)  || 0;
+            let A200 = parseInt(document.getElementById("A200").value) || 0;
+            let A500 = parseInt(document.getElementById("A500").value)  || 0;
+            let A1000 = parseInt(document.getElementById("A1000").value) || 0;
+            let A = parseInt(document.getElementById("A").value) || 0;
+            var total = (A10*10)+(A20*20)+(A100*100)+(A200*200)+(A500*500)+(A1000*1000)+(A*1);
+            document.getElementById("tall").innerHTML = total; 
+        }
+
+    </script>
+</body>
+</html>
